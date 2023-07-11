@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import data from './data/data_sample.json'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link,useParams } from 'react-router-dom';
 
 function GetProvidersName(){
   return(
@@ -19,7 +19,20 @@ function GetProvidersName(){
 
 
 function DetailsPage(){
-  return <p>Details:</p>
+  const { id } = useParams();
+  const selectedItem = data.find(item => item.id === parseInt(id))
+  
+  return (
+    <>
+    <h1>Provider Details:</h1>
+    <p>Phone Number: {selectedItem.phone_number}</p>
+    <p>Address: {selectedItem.address}</p>
+    <p>Total cost: {selectedItem.total_cost}</p>
+    <p>Average patient age: {selectedItem.average_patient_age} years</p>
+    <p>Average inpatient claim cost: {selectedItem.average_inpatient_claim_cost} </p>
+    <p>Average outpatient claim cost: {selectedItem.average_outpatient_claim_cost} </p>
+    </>
+    )
 }
 
 function App() {
