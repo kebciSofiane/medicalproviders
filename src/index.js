@@ -6,17 +6,25 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import './app.css';
 
 function GetProvidersName() {
+
   return (
     <div>
       <h1>Our medical providers: </h1>
-      <ul>{data.map(provider => (
-        <li key={provider.id}>
-          <Link to={`/providersDetails/${provider.id}}`}>{provider.name}</Link>
-        </li>
-      ))}
+      <ul className="providersList">
+        {data.map((provider) => (
+          <li key={provider.id}>
+            <Link to={`/providersDetails/${provider.id}`}>
+              <div className="providersName">
+                <h2>{provider.name}</h2>
+                <p>{provider.address}</p>
+              </div>
+            </Link>
+          </li>
+        ))}
       </ul>
+
     </div>
-  )
+  );
 }
 
 
