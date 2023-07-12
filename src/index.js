@@ -6,7 +6,6 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import './app.css';
 
 function GetProvidersName() {
-
   return (
     <div>
       <h1 className='title'>Our medical providers: </h1>
@@ -27,16 +26,16 @@ function GetProvidersName() {
 }
 
 
-function getSingleProviderDetails(selectedProvider ) {
+function getSingleProviderDetails(selectedProvider) {
   return (
-    <div>
+    <div >
       <h1>{selectedProvider.name}</h1>
-      <p>Phone Number: {selectedProvider.phone_number}</p>
-      <p>Address: {selectedProvider.address}</p>
-      <p>Total cost: {selectedProvider.total_cost}</p>
-      <p>Average patient age: {selectedProvider.average_patient_age} years</p>
-      <p>Average inpatient claim cost: {selectedProvider.average_inpatient_claim_cost} </p>
-      <p>Average outpatient claim cost: {selectedProvider.average_outpatient_claim_cost} </p>
+      <p> <span className='detailTitle' >Address: </span>{selectedProvider.address}</p>
+      <p> <span className='detailTitle'>Phone Number:</span> {selectedProvider.phone_number}</p>
+      <p> <span className='detailTitle'>Total cost: </span>{selectedProvider.total_cost}</p>
+      <p> <span className='detailTitle'>Average patient age:</span>{selectedProvider.average_patient_age} years</p>
+      <p> <span className='detailTitle'>Average inpatient claim cost: </span>{selectedProvider.average_inpatient_claim_cost} </p>
+      <p> <span className='detailTitle'>Average outpatient claim cost: </span>{selectedProvider.average_outpatient_claim_cost} </p>
     </div>
   )
 }
@@ -66,7 +65,7 @@ function DetailsPage() {
   const { id } = useParams();
   const selectedProvider = data.find(item => item.id == parseInt(id))
   return (
-    <div>
+    <div className='singleProviderDetails'>
       {getSingleProviderDetails(selectedProvider)}
       {displayTheMap(selectedProvider)}
     

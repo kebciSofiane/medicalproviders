@@ -1,10 +1,17 @@
 .leaflet-container {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
   }
+
+  body{
+    background-color: black;
+  }
+
   .title{
     text-align: center;
     font-size: 50px;
+    color: rgb(189, 174, 174);
+
   }
 
   .providersName{
@@ -15,6 +22,7 @@
     border-style: solid; 
     border-radius: 5%;
     text-align: center;
+    background-color: #242637;
    
   }
 
@@ -34,5 +42,35 @@
   }
   
   .providersName {
-    color: rgb(0, 0, 0); 
+    color: rgb(189, 174, 174);
+  }
+
+  .singleProviderDetails{
+    border-style: solid;
+    width: 700px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: #242637;
+    color: rgb(189, 174, 174);
+
+
+ 
+  }
+
+  .singleProviderDetails h1{
+    text-align: center;
+  }
+  .map {
+    margin-left: auto;
+    padding: 5px;
+    width: 450px;
+    background-color:black;
+    margin-right: auto;  
+  }
+
+  .detailTitle{
+    font-weight: bold;
   }
