@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import data from './data/data_sample.json'
 import { BrowserRouter as Router, Routes, Route, Link,useParams } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import './map.css'; // Import the CSS file
+import './app.css';
 
 function GetProvidersName(){
   return(
