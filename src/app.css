@@ -7,11 +7,10 @@
     background-color: black;
   }
 
-  .title{
+  .indexPageTitle{
     text-align: center;
     font-size: 50px;
     color: rgb(189, 174, 174);
-
   }
 
   .providersName{
@@ -23,7 +22,6 @@
     border-radius: 5%;
     text-align: center;
     background-color: #242637;
-   
   }
 
   .providersList{
@@ -34,7 +32,6 @@
 
   .providersList li {
     display: inline-block; 
-
   }
 
   .providerLink {
@@ -55,14 +52,12 @@
     font-size: 20px;
     background-color: #242637;
     color: rgb(189, 174, 174);
-
-
- 
   }
 
   .singleProviderDetails h1{
     text-align: center;
   }
+
   .map {
     margin-left: auto;
     padding: 5px;
@@ -71,6 +66,6 @@
     margin-right: auto;  
   }
 
-  .detailTitle{
+  .informationTitle{
     font-weight: bold;
   }

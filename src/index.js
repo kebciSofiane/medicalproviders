@@ -8,7 +8,7 @@ import './app.css';
 function GetProvidersName() {
   return (
     <div>
-      <h1 className='title'>Our medical providers: </h1>
+      <h1 className='indexPageTitle'>Our medical providers: </h1>
       <ul className="providersList">
         {data.map((provider) => (
           <li key={provider.id}>
@@ -25,24 +25,23 @@ function GetProvidersName() {
   );
 }
 
-
 function getSingleProviderDetails(selectedProvider) {
   return (
     <div >
       <h1>{selectedProvider.name}</h1>
-      <p> <span className='detailTitle' >Address: </span>{selectedProvider.address}</p>
-      <p> <span className='detailTitle'>Phone Number:</span> {selectedProvider.phone_number}</p>
-      <p> <span className='detailTitle'>Total cost: </span>{selectedProvider.total_cost}</p>
-      <p> <span className='detailTitle'>Average patient age:</span>{selectedProvider.average_patient_age} years</p>
-      <p> <span className='detailTitle'>Average inpatient claim cost: </span>{selectedProvider.average_inpatient_claim_cost} </p>
-      <p> <span className='detailTitle'>Average outpatient claim cost: </span>{selectedProvider.average_outpatient_claim_cost} </p>
+      <p> <span className='informationTitle'>Address: </span>{selectedProvider.address}</p>
+      <p> <span className='informationTitle'>Phone Number:</span> {selectedProvider.phone_number}</p>
+      <p> <span className='informationTitle'>Total cost: </span>{selectedProvider.total_cost}</p>
+      <p> <span className='informationTitle'>Average patient age: </span>{selectedProvider.average_patient_age}</p>
+      <p> <span className='informationTitle'>Average inpatient claim cost: </span>{selectedProvider.average_inpatient_claim_cost} </p>
+      <p> <span className='informationTitle'>Average outpatient claim cost: </span>{selectedProvider.average_outpatient_claim_cost} </p>
     </div>
   )
 }
 
-
 function displayTheMap(selectedProvider){
   const position = selectedProvider.coordinates;
+  const providersName = selectedProvider.name;
   return(
     <div className="map" id="map">
     <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
@@ -52,14 +51,13 @@ function displayTheMap(selectedProvider){
       />
       <Marker position={position}>
         <Popup>
-          Provider Location
+        {providersName}
         </Popup>
       </Marker>
     </MapContainer>
   </div>
   )
 }
-
 
 function DetailsPage() {
   const { id } = useParams();
@@ -68,11 +66,9 @@ function DetailsPage() {
     <div className='singleProviderDetails'>
       {getSingleProviderDetails(selectedProvider)}
       {displayTheMap(selectedProvider)}
-    
     </div>
   );
 }
-
 
 function App() {
   return (
@@ -84,7 +80,6 @@ function App() {
     </Router>
   );
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
