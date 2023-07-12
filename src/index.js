@@ -9,11 +9,11 @@ function GetProvidersName() {
 
   return (
     <div>
-      <h1>Our medical providers: </h1>
+      <h1 className='title'>Our medical providers: </h1>
       <ul className="providersList">
         {data.map((provider) => (
           <li key={provider.id}>
-            <Link to={`/providersDetails/${provider.id}`}>
+            <Link to={`/providersDetails/${provider.id}`} className="providerLink">
               <div className="providersName">
                 <h2>{provider.name}</h2>
                 <p>{provider.address}</p>
@@ -22,7 +22,6 @@ function GetProvidersName() {
           </li>
         ))}
       </ul>
-
     </div>
   );
 }

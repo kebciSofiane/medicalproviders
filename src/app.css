@@ -2,22 +2,37 @@
     width: 350px;
     height: 350px;
   }
+  .title{
+    text-align: center;
+    font-size: 50px;
+  }
 
   .providersName{
     padding: 2%;
     width: 500px;
-    height: 200px;
-    margin-bottom: 1%;
+    height: 120px;
+    margin: 2%;
     border-style: solid; 
     border-radius: 5%;
+    text-align: center;
+   
   }
 
   .providersList{
-    list-style-type: none;  
-    columns: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+    grid-gap: 20px; 
   }
 
   .providersList li {
     display: inline-block; 
-    width: 100%; 
+
+  }
+
+  .providerLink {
+    text-decoration: none;
+  }
+  
+  .providersName {
+    color: rgb(0, 0, 0); 
   }
