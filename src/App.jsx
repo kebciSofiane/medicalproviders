@@ -1,6 +1,6 @@
 import React from "react";
-import ProvidersList from './components/ProvidersList.js';
-import DetailsPage from './components/DetailsPage.js';
+import ProvidersList from './components/ProvidersList.jsx';
+import DetailsPage from './components/DetailsPage.jsx';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {

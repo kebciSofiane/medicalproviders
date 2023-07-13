@@ -1,6 +1,6 @@
 import React from 'react';
-import ProviderDetails from './ProviderDetails.js';
-import ProvidersPositionOnMap from './ProvidersPositionOnMap.js';
+import ProviderDetails from './ProviderDetails.jsx';
+import ProvidersPositionOnMap from './ProvidersPositionOnMap.jsx';
 import data from '../data/data_sample.json'
 import { useParams } from 'react-router-dom';
 
